@@ -10,6 +10,12 @@ module.exports.getProducts = (req, res, next) => {
   });
 };
 
+module.exports.getSingleProduct = (req, res, next) => {
+  const prodId = req.params.productId;
+  console.log(prodId);
+  res.redirect("/");
+};
+
 module.exports.getCart = (req, res, next) => {
   res.render("shop/cart", {
     pageTitle: "Shopping Cart",
